@@ -61,7 +61,7 @@ class RetrieverManager():
                 'filter': {
                     "bool": {
                         "must": [
-                            {"term": {"game_name.keyword": self.game_name}}
+                            {"term": {"metadata.game_name.keyword": self.game_name}}
                         ]
                     }
                 }
@@ -87,14 +87,17 @@ class RetrieverManager():
         return chroma_retriever
 
     def create_ensemble_retriever(self, chroma_retriever, es_retriever):
+        print("앙상블 검색기 생성 중...")
         ensemble_retriever = EnsembleRetriever(
             retrievers=[chroma_retriever, es_retriever],
             weights=[0.3, 0.7],
             id_key="id"
         )
+        print("앙상블 검색기 생성 완료!")
         return ensemble_retriever
     
     def create_retriever(self):
+        print(f"{self.game_name} 규칙서 검색기 생성을 시작합니다.")
         es_retriever = self.create_es_retriever()
         chroma_retriever = self.create_chroma_retriever()
         ensemble_retriever = self.create_ensemble_retriever(chroma_retriever, es_retriever)
@@ -102,6 +105,7 @@ class RetrieverManager():
         retriever = ContextualCompressionRetriever(
             base_compressor=compressor, base_retriever=ensemble_retriever
         )
+        print("검색기 생성이 완료되었습니다.")
         return retriever
 
 if __name__ == "__main__":

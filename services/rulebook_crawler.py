@@ -67,6 +67,7 @@ def crawl_rulebooks():
 
     # 동적으로 로드된 리스트 가져오기
     items = driver.find_elements(By.CSS_SELECTOR, "#roleList li > a")
+    urls = []
     for item in items:
         title = item.find_element(By.CSS_SELECTOR, "div.info > strong").get_attribute("innerText")
         print(title)
@@ -74,6 +75,9 @@ def crawl_rulebooks():
             continue
         game_name = title.split("규칙서")[0].strip()
         url = item.get_attribute("href")
+        urls.append((game_name, url))
+    
+    for game_name, url in urls:
         download_rulebook(game_name, url)
 
 if __name__ == "__main__":
