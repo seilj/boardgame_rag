@@ -1,4 +1,4 @@
 /rulebooks
-/chroma_db
-
+/chroma
 .env
+__pycache__/

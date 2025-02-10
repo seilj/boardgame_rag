@@ -26,33 +26,33 @@ driver = webdriver.Chrome(options=chrome_options)
 def download_rulebook(game_name, url):
     game_dir = os.path.join(PDF_DIR, game_name)
     os.makedirs(game_dir, exist_ok=True)
-    # driver.get(url)
-    # try:
-    #     # PDF 링크가 로드될 때까지 대기
-    #     WebDriverWait(driver, 10).until(
-    #         EC.presence_of_element_located(
-    #             (By.CSS_SELECTOR, "body > div.wrapper > div.container > section > div.file_wrap > div > a")
-    #         )
-    #     )
-    #     # 모든 PDF 링크 가져오기
-    #     pdf_links = driver.find_elements(
-    #         By.CSS_SELECTOR, "body > div.wrapper > div.container > section > div.file_wrap > div > a"
-    #     )
-    #     for pdf_link in pdf_links:
-    #         pdf_url = pdf_link.get_attribute("href")
-    #         filename = unquote(pdf_url.split("orgFileName=")[-1].split("&")[0])
-    #         response = requests.get(pdf_url, stream=True)
-    #         if response.status_code == 200:
-    #             filepath = os.path.join(game_dir, filename)
-    #             with open(filepath, 'wb') as file:
-    #                 for chunk in response.iter_content(1024):
-    #                     file.write(chunk)
-    #             print(f"Downloaded: {filename}")
-    #         else:
-    #             print(f"Failed to download: {url}")
+    driver.get(url)
+    try:
+        # PDF 링크가 로드될 때까지 대기
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located(
+                (By.CSS_SELECTOR, "body > div.wrapper > div.container > section > div.file_wrap > div > a")
+            )
+        )
+        # 모든 PDF 링크 가져오기
+        pdf_links = driver.find_elements(
+            By.CSS_SELECTOR, "body > div.wrapper > div.container > section > div.file_wrap > div > a"
+        )
+        for pdf_link in pdf_links:
+            pdf_url = pdf_link.get_attribute("href")
+            filename = unquote(pdf_url.split("orgFileName=")[-1].split("&")[0])
+            response = requests.get(pdf_url, stream=True)
+            if response.status_code == 200:
+                filepath = os.path.join(game_dir, filename)
+                with open(filepath, 'wb') as file:
+                    for chunk in response.iter_content(1024):
+                        file.write(chunk)
+                print(f"Downloaded: {filename}")
+            else:
+                print(f"Failed to download: {url}")
 
-    # except Exception as e:
-    #     print(f"PDF 링크를 찾을 수 없음: {url}, 오류: {e}")
+    except Exception as e:
+        print(f"PDF 링크를 찾을 수 없음: {url}, 오류: {e}")
 
 def crawl_rulebooks():
     """규칙서 크롤링"""
