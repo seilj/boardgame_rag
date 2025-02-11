@@ -10,19 +10,16 @@ from langchain_community.chat_message_histories import ChatMessageHistory
 import uuid
 from services.retriever_manager import RetrieverManager
 from collections import OrderedDict
-from langchain_teddynote import logging as logging_teddynote
 
 from dotenv import load_dotenv
 load_dotenv()
-
-LANGCHAIN_PROJECT = os.getenv("LANGCHAIN_PROJECT")
-logging_teddynote.langsmith(LANGCHAIN_PROJECT)
 
 class RAGChain:
     _system_prompt_text = """
     당신은 보드게임 규칙에 대한 질문에 답변하는 전문가입니다.
     주어진 rule_document를 토대로 주어진 question에 답하여주세요. 답변 시 아래 가이드를 **반드시** 참고합니다.
     - 질문과 관련있는 rule_document가 없는 경우 "죄송합니다. 관련 내용을 규칙서에서 확인할 수 없습니다."라고 답변합니다.
+    - rule_document에서 게임 규칙과 관련없는 내용은 무시하며, 직접적으로 게임 규칙에 대해 설명하는 부분만을 참고합니다.
     - rule_document에 존재하는 내용으로만 답변하며, 절대 추측성, 주관적 내용을 답변에 포함해서는 안됩니다.
     """
 

@@ -132,7 +132,13 @@ def set_db():
         
     index_rulebook(chunks)
     save_to_chroma(chunks)
-    
+
+def es_to_chroma():
+    es = Elasticsearch(ES_URL, basic_auth=(ES_USER, ES_PW))
+    es_data = es.search(index="rulebooks-index-latest", size=10000)
+    chunks = [hits["_source"] for hits in es_data["hits"]["hits"]]
+    save_to_chroma(chunks)
 
 if __name__ == "__main__":
-    set_db()
+    # set_db()
+    es_to_chroma()

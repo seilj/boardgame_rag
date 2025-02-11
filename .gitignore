@@ -2,3 +2,4 @@
 /chroma
 .env
 __pycache__/
+.python-version
