@@ -9,10 +9,21 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_community.chat_message_histories import ChatMessageHistory
 import uuid
 from services.retriever_manager import RetrieverManager
-from collections import OrderedDict
 
 from dotenv import load_dotenv
 load_dotenv()
+
+store = {}
+
+def limit_chat_history(chat_history):
+    limit_turns = 3
+    return chat_history[-2*limit_turns:]
+
+def get_session_history(session_ids):
+    print(f"[대화 세션ID]: {session_ids}")
+    if session_ids not in store:
+        store[session_ids] = ChatMessageHistory()
+    return store[session_ids]
 
 class RAGChain:
     _system_prompt_text = """
@@ -30,9 +41,9 @@ class RAGChain:
     {question}
     """
     
-    def __init__(self, retriever_manager: RetrieverManager, model_name="gpt-4o-mini"):
+    def __init__(self, retriever_manager: RetrieverManager):
         self.retriever_manager = retriever_manager
-        self.answer_generator = self.create_chain(model_name)
+        self.answer_generator = self.create_chain()
 
     def create_chain(self, model_name="gpt-4o-mini"):
         prompt = ChatPromptTemplate.from_messages(
@@ -42,7 +53,25 @@ class RAGChain:
             ]
         )
         llm = ChatOpenAI(model=model_name, temperature=0)
-        return prompt | llm | StrOutputParser()
+        chain =(
+            {
+                "question": itemgetter("question"),
+                "rule_document": itemgetter("rule_document"),
+                "chat_history": lambda x: limit_chat_history(x["chat_history"]),
+            }
+            | prompt
+            | llm
+            | StrOutputParser()
+        )
+
+        chain_with_history_session = RunnableWithMessageHistory(
+            chain,
+            get_session_history,
+            input_messages_key="question",
+            history_messages_key="chat_history",
+        )
+
+        return chain_with_history_session
 
     def invoke(self):
         pass

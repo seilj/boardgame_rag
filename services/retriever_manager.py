@@ -39,7 +39,14 @@ class RetrieverManager():
     def __init__(self, game_name):
         self.game_name = game_name
         self.embedding = OpenAIEmbeddings(model=self._embedding_model_name)
-        self.retriever = self.create_retriever()
+        if game_name in self._cache:
+            self.retriever = self._cache[game_name]
+            self._cache.move_to_end(game_name)
+        else:
+            self.retriever = self.create_retriever()
+            self._cache[game_name] = self.retriever
+            if len(self._cache) > self._cache_max_size:
+                self._cache.popitem(last=False)  # 가장 오래된 항목 제거
 
     def create_es_retriever(self):
         print("ES 검색기 생성 중...")
