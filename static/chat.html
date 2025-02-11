@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>보드게임 챗봇</title>
+    <style>
+        /* 전체 스타일 */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background: #f4f7fc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* 챗봇 컨테이너 */
+        .chat-container {
+            width: 90%;
+            max-width: 500px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 22px;
+            color: #2c3e50;
+            margin-bottom: 15px;
+        }
+
+        /* 게임 선택 드롭다운 */
+        .dropdown-container {
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            background: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* 채팅창 스타일 */
+        #chat-box {
+            border-radius: 10px;
+            padding: 15px;
+            height: 350px;
+            overflow-y: auto;
+            background: #ecf0f1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* 사용자 및 챗봇 메시지 스타일 */
+        .user-message, .bot-message {
+            max-width: 75%;
+            padding: 10px 15px;
+            border-radius: 12px;
+            margin: 5px 0;
+            font-size: 14px;
+            line-height: 1.4;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        /* 사용자 메시지 (우측 정렬) */
+        .user-message {
+            align-self: flex-end;
+            background: #3498db;
+            color: white;
+        }
+
+        /* 챗봇 메시지 (좌측 정렬) */
+        .bot-message {
+            align-self: flex-start;
+            background: #2ecc71;
+            color: white;
+        }
+
+        /* 입력창 컨테이너 */
+        .input-container {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #bdc3c7;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 12px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #2980b9;
+        }
+
+        /* 메시지 페이드인 애니메이션 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* 스피너 스타일 */
+        .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-left: 10px;
+        }
+
+        /* 스피너 애니메이션 */
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <h1>보드게임 챗봇</h1>
+
+        <!-- 게임 선택 드롭다운 -->
+        <div class="dropdown-container">
+            <label for="game-select">게임 선택:</label>
+            <select id="game-select">
+                <option value="카탄">카탄</option>
+                <option value="윙스팬">윙스팬</option>
+                <option value="뤄양의 사람들">뤄양의 사람들</option>
+            </select>
+        </div>
+
+        <!-- 채팅 영역 -->
+        <div id="chat-box"></div>
+
+        <!-- 질문 입력창 -->
+        <div class="input-container">
+            <input type="text" id="question-input" placeholder="질문을 입력하세요..." />
+            <button onclick="sendMessage()">▶</button>
+        </div>
+    </div>
+
+    <script>
+        async function sendMessage() {
+            const chatBox = document.getElementById("chat-box");
+            const gameName = document.getElementById("game-select").value;
+            const question = document.getElementById("question-input").value;
+            
+            if (!question.trim()) {
+                alert("질문을 입력하세요!");
+                return;
+            }
+
+            // 사용자 메시지 추가
+            const userMessage = document.createElement("div");
+            userMessage.classList.add("user-message");
+            userMessage.innerText = question;
+            chatBox.appendChild(userMessage);
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // 챗봇 응답용 div 생성
+            const botMessage = document.createElement("div");
+            botMessage.classList.add("bot-message");
+            chatBox.appendChild(botMessage);
+
+            // 스피너 추가
+            const spinner = document.createElement("div");
+            spinner.classList.add("spinner");
+            botMessage.appendChild(spinner);
+
+            // 서버에 보낼 데이터
+            const query = {
+                question: question,
+                game_name: gameName,
+                session_id: Date.now().toString()
+            };
+
+            // 서버와 SSE 연결
+            const response = await fetch("/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(query)
+            });
+
+            // 서버 응답을 스트리밍으로 처리
+            const reader = response.body.getReader();
+            const decoder = new TextDecoder();
+            
+            let botResponse = ""; // 실시간 업데이트용 변수
+
+            async function readStream() {
+                while (true) {
+                    const { done, value } = await reader.read();
+                    if (done) break;
+
+                    // 스피너 제거 후 실시간 응답 추가
+                    spinner.remove();
+                    botResponse += decoder.decode(value);
+                    botMessage.innerText = botResponse; // 기존 메시지에 계속 업데이트
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+            }
+
+            await readStream();
+            
+            // 입력창 초기화
+            document.getElementById("question-input").value = "";
+        }
+    </script>
+</body>
+</html>

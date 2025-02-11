@@ -14,7 +14,7 @@ from langchain.retrievers.contextual_compression import ContextualCompressionRet
 from dotenv import load_dotenv
 load_dotenv()
 
-RETRIEVER_DOC_K = 10
+RETRIEVER_DOC_K = 5
 RERANKER_DOC_K = 5
 EMBEDDING_MODEL_NAME = "text-embedding-3-large"
 CHROMA_COLLECTION_NAME = "rulebook"
