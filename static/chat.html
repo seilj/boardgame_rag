@@ -153,11 +153,6 @@
         <div class="dropdown-container">
             <label for="game-select">게임 선택:</label>
             <select id="game-select">
-                <option value="카탄">카탄</option>
-                <option value="윙스팬">윙스팬</option>
-                <option value="뤄양의 사람들">뤄양의 사람들</option>
-                <option value="아컴호러">아컴호러</option>
-                <option value="아그리콜라">아그리콜라</option>
             </select>
         </div>
 
@@ -172,6 +167,27 @@
     </div>
 
     <script>
+        async function loadGames() {
+            try{
+                const response = await fetch("/games");
+                const data = await response.json()
+                const select = document.getElementById("game-select");
+
+                // 게임 목록을 드롭다운에 추가
+                data.games.forEach(game => {
+                    const option = document.createElement("option");
+                    option.value = game;
+                    option.textContent = game;
+                    select.appendChild(option);
+                });                
+            } catch (error){
+                console.error("게임 목록 불러오기 실패: ", error);
+            }
+        }
+
+        // 페이지 로드 시 실행
+        document.addEventListener("DOMContentLoaded", loadGames);
+
         async function sendMessage() {
             const chatBox = document.getElementById("chat-box");
             const gameName = document.getElementById("game-select").value;

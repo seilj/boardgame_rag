@@ -82,7 +82,7 @@ class RAGChain:
         retrieved_docs = self.retriever_manager.retriever.invoke(question)
 
         for chunk in self.answer_generator.stream(
-            {"rule_document": retrieved_docs, "question": question}, 
+            {"rule_document": retrieved_docs, "question": question},
             config = {"configurable": {"session_id": session_id}}
         ):
             yield chunk

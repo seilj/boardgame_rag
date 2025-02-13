@@ -1,4 +1,4 @@
-import os
+import os, json
 from datetime import datetime
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -6,6 +6,9 @@ from elasticsearch import Elasticsearch, helpers
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain.schema import Document
+from langchain_openai import ChatOpenAI
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -40,7 +43,53 @@ def split_rulebook(info):
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
     splitted_docs = text_splitter.split_documents(document)
     chunks = [{"content": doc.page_content, "metadata": {"page": doc.metadata["page"] + 1, "file_path": file_path, "game_name": game_name}} for doc in splitted_docs]
-    return chunks
+    return get_context(document, chunks)
+
+def get_context(document, chunks):
+    context_prompt = """
+    <document>
+    {document}
+    </document>
+    보드게임 규칙과 관련된 document가 있습니다. 위 document의 일부에 해당하는 context가 주어집니다.
+    전체 document 내 chunk의 검색결과를 개선하기 위해 두 문장 이내의 간결한 context를 제공하세요.
+    또, 주어진 chunk가 document의 어느 부분을 설명하고 있는지 "게임 소개", "구성물 및 준비", "게임 진행", "종료 및 승리 조건" 네 category 중 하나로 분류해주세요.
+    다음 가이드라인을 **반드시** 지켜 주세요.
+    - chunk가 flavor text나 credit 등 게임 규칙과 직접적으로 관련이 없는 텍스트인 경우 context와 category 모두 "None"으로 출력해주세요.
+    - context와 category를 key로 가지는 json형식으로 출력해주세요. json 출력외에 불필요한 정보는 아무것도 출력하지 마세요.
+        출력예시: {{{{ "context": "context content", "category": "category content" }}}}
+    - context에는 chunk의 전후 맥락, chunk가 설명하는 대상이나 포함된 섹션 등의 global한 정보를 document를 참고하여 간결하게 작성하세요.
+    """
+    document_content = ""
+    for page in document:
+        document_content += page.page_content
+    
+    llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+    prompt = ChatPromptTemplate.from_messages(
+        [
+            ("system", context_prompt.format(document=document_content)),
+            ("user", "#chunk: {chunk}")
+        ]
+    )
+
+    chain = prompt | llm | StrOutputParser()
+
+    context_chunks = []
+    for chunk in chunks:
+        response = chain.invoke({"chunk": chunk["content"]})
+        print(f"chunk: {chunk["content"]}\nresponse: {response}")
+        response_dict = json.loads(response)
+        metadata = chunk["metadata"]
+        metadata["category"] = response_dict.get("category")
+        context_chunks.append(
+            {
+                "content": f"#본문: {chunk["content"]}\n#설명: {response_dict.get("context")}",
+                "metadata": metadata
+            }
+        )
+    
+    return context_chunks
+
+
 
 def index_rulebook(chunks, update=False):
     """
@@ -54,8 +103,7 @@ def index_rulebook(chunks, update=False):
     # Elasticsearch 클라이언트 설정
     es = Elasticsearch(
         [ES_URL],
-        basic_auth=(ES_USER, ES_PW),
-        verify_certs=False
+        basic_auth=(ES_USER, ES_PW)
     )
 
     # 고유한 인덱스 이름 생성 (현재 시간 기반)
@@ -140,5 +188,5 @@ def es_to_chroma():
     save_to_chroma(chunks)
 
 if __name__ == "__main__":
-    # set_db()
-    es_to_chroma()
+    set_db()
+    # es_to_chroma()

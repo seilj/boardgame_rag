@@ -52,8 +52,7 @@ class RetrieverManager():
         print("ES 검색기 생성 중...")
         es_client = Elasticsearch(
             ES_URL,
-            basic_auth=(ES_USER, ES_PW),
-            verify_certs=False  # SSL 인증서 검증 비활성화
+            basic_auth=(ES_USER, ES_PW)
         )
         es_store = ElasticsearchStore(
             es_connection=es_client,
