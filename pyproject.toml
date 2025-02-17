@@ -19,6 +19,10 @@ selenium = "^4.28.1"
 langgraph = "^0.2.71"
 pymongo = "^4.11.1"
 pymupdf = "^1.25.3"
+langchain-upstage = "^0.6.0"
+cryptography = "^44.0.1"
+pdf2image = "^1.17.0"
+beautifulsoup4 = "^4.13.3"
 
 
 [build-system]

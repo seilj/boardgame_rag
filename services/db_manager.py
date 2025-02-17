@@ -1,14 +1,17 @@
-import os, json
+import sys, os, json
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from datetime import datetime
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from elasticsearch import Elasticsearch, helpers
+from langchain_elasticsearch import ElasticsearchStore
 from langchain_chroma import Chroma
 from langchain_openai import OpenAIEmbeddings
 from langchain.schema import Document
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+from services.custom_es_store import CustomBM25Strategy
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -16,11 +19,14 @@ load_dotenv()
 ES_URL = os.getenv("ES_URL")
 ES_USER = os.getenv("ES_USER")
 ES_PW = os.getenv("ES_PW")
+ES_INDEX_NAME = "rulebooks-index"
 CHROMA_COLLECTION_NAME = "rulebook"
 EMBEDDING_MODEL_NAME = "text-embedding-3-large"
 
 PDF_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'rulebooks')
 CHROMA_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'chroma')
+
+es = Elasticsearch(ES_URL, basic_auth=(ES_USER, ES_PW))
 
 def load_rulebook():
     rulebooks_info = []
@@ -77,6 +83,9 @@ def get_context(document, chunks):
     for chunk in chunks:
         response = chain.invoke({"chunk": chunk["content"]})
         print(f"chunk: {chunk["content"]}\nresponse: {response}")
+        if "None" in response:
+            print("불필요한 청크 탐지")
+            continue
         response_dict = json.loads(response)
         metadata = chunk["metadata"]
         metadata["category"] = response_dict.get("category")
@@ -89,9 +98,7 @@ def get_context(document, chunks):
     
     return context_chunks
 
-
-
-def index_rulebook(chunks, update=False):
+def index_to_es(chunks, index_name, update=False):
     """
     룰북 데이터를 Elasticsearch에 인덱싱하고, alias를 업데이트합니다.
 
@@ -109,16 +116,16 @@ def index_rulebook(chunks, update=False):
     # 고유한 인덱스 이름 생성 (현재 시간 기반)
     current_time = datetime.now()
     current_time_str = current_time.strftime("%Y.%m.%d-%H.%M.%S.%f")[:-3]
-    INDEX_NAME = f"rulebooks-index-{current_time_str}"
+    INDEX_NAME = index_name + f"-{current_time_str}"
 
     if(update):
         existing_data = [hits["_source"] for hits in es.search(index=INDEX_NAME, size=10000)["hits"]["hits"]]
         chunks.extend(existing_data)
     
-    # id = 0
-    # for chunk in chunks:
-    #     chunk["id"] = id
-    #     id += 1
+    id = 0
+    for chunk in chunks:
+        chunk["id"] = id
+        id += 1
 
     # Elasticsearch 문서 생성
     es_docs = [
@@ -139,7 +146,7 @@ def index_rulebook(chunks, update=False):
 
     # Alias 업데이트
     print(f"<alias 변경> 시작")
-    ALIAS_NAME = "rulebooks-index-latest"
+    ALIAS_NAME = index_name + "-latest"
 
     # 기존 alias 제거
     if es.indices.exists_alias(name=ALIAS_NAME):
@@ -154,10 +161,10 @@ def index_rulebook(chunks, update=False):
 
     print(f"<룰북 데이터 Elasticsearch 색인> 완료")
 
-def save_to_chroma(chunks, update=False):
+def save_to_chroma(chunks, collection_name, update=False):
     print("Chroma db 저장중...")
     embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL_NAME)
-    chroma_store = Chroma(persist_directory=CHROMA_DIR, embedding_function=embedding, collection_name=CHROMA_COLLECTION_NAME)
+    chroma_store = Chroma(persist_directory=CHROMA_DIR, embedding_function=embedding, collection_name=collection_name)
     if not update:
         all_ids = chroma_store.get()["ids"]
         if all_ids:
@@ -169,24 +176,33 @@ def save_to_chroma(chunks, update=False):
     chroma_store.add_documents(docs)
     print("Chroma db 저장 완료")
 
-def set_db():
-    rulebooks_info = load_rulebook()
-    chunks = []
-    for info in rulebooks_info:
-        chunks.extend(split_rulebook(info))
+def get_es_store(index_name):
+    return ElasticsearchStore(
+            es_connection=es,
+            index_name=index_name,
+            query_field="content",
+            strategy=CustomBM25Strategy(),
+        )
 
-    for id, chunk in enumerate(chunks):
-        chunk["metadata"]["id"] = id
-        
-    index_rulebook(chunks)
-    save_to_chroma(chunks)
+def get_chroma_store(collection_name):
+    embedding = OpenAIEmbeddings(model=EMBEDDING_MODEL_NAME)
+    return Chroma(
+        persist_directory=CHROMA_DIR, embedding_function=embedding, collection_name=collection_name
+    )
+
+def set_db(init_es=True):
+    if init_es:
+        rulebooks_info = load_rulebook()
+        chunks = []
+        for info in rulebooks_info:
+            chunks.extend(split_rulebook(info))
+        index_to_es(chunks, ES_INDEX_NAME)
+    es_to_chroma()
 
 def es_to_chroma():
-    es = Elasticsearch(ES_URL, basic_auth=(ES_USER, ES_PW))
     es_data = es.search(index="rulebooks-index-latest", size=10000)
     chunks = [hits["_source"] for hits in es_data["hits"]["hits"]]
-    save_to_chroma(chunks)
+    save_to_chroma(chunks, CHROMA_COLLECTION_NAME)
 
 if __name__ == "__main__":
     set_db()
-    # es_to_chroma()

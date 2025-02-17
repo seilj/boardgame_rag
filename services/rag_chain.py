@@ -26,9 +26,19 @@ def get_session_history(session_ids):
     return store[session_ids]
 
 class RAGChain:
+    # _system_prompt_text = """
+    # 당신은 보드게임 규칙에 대한 질문에 답변하는 전문가입니다.
+    # 주어진 rule_document를 토대로 주어진 question에 답하여주세요. 답변 시 아래 가이드를 **반드시** 참고합니다.
+    # - 질문과 관련있는 rule_document가 없는 경우 "죄송합니다. 관련 내용을 규칙서에서 확인할 수 없습니다."라고 답변합니다.
+    # - rule_document에서 게임 규칙과 관련없는 내용은 무시하며, 직접적으로 게임 규칙에 대해 설명하는 부분만을 참고합니다.
+    # - rule_document에 존재하는 내용으로만 답변하며, 절대 추측성, 주관적 내용을 답변에 포함해서는 안됩니다.
+    # """
+
     _system_prompt_text = """
     당신은 보드게임 규칙에 대한 질문에 답변하는 전문가입니다.
     주어진 rule_document를 토대로 주어진 question에 답하여주세요. 답변 시 아래 가이드를 **반드시** 참고합니다.
+    - rule_document는 srt파일 형식을 지니고 있습니다. 주어진 rule_document의 text 부분을 참고하여 질문에 답변하고, 답변에 참고한 text의 start 값과 metadata의 vid 값을 이용해 다음과 같이 해당 설명의 링크를 표시해주세요:
+        <영상주소: https://www.youtube.com/watch?v={{vid}}&t={{start}}s>
     - 질문과 관련있는 rule_document가 없는 경우 "죄송합니다. 관련 내용을 규칙서에서 확인할 수 없습니다."라고 답변합니다.
     - rule_document에서 게임 규칙과 관련없는 내용은 무시하며, 직접적으로 게임 규칙에 대해 설명하는 부분만을 참고합니다.
     - rule_document에 존재하는 내용으로만 답변하며, 절대 추측성, 주관적 내용을 답변에 포함해서는 안됩니다.
@@ -89,8 +99,8 @@ class RAGChain:
 
 if __name__ == "__main__":
     # rag chain 테스트
-    QUERY = "도시 건설하는데 뭐가 필요해?"
-    game_name = "카탄"
+    QUERY = "카드 구성이 어떻게 돼?"
+    game_name = "달무티"
     retriever_manager = RetrieverManager(game_name)
     rag_chain = RAGChain(retriever_manager)
     for chunk in rag_chain.stream({"question": QUERY}):

@@ -1,5 +1,7 @@
 /rulebooks
 /chroma
+/image
+test/
 .env
 __pycache__/
 .python-version
