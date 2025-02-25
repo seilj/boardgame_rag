@@ -2,11 +2,11 @@ import sys, os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from collections import OrderedDict
-from langchain_openai import OpenAIEmbeddings
 from services.db_manager import get_es_store, get_chroma_store
-from langchain.retrievers import EnsembleRetriever
-from langchain_cohere import CohereRerank
-from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
+# from langchain_openai import OpenAIEmbeddings
+# from langchain.retrievers import EnsembleRetriever
+# from langchain_cohere import CohereRerank
+# from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
 
 from dotenv import load_dotenv
 load_dotenv()
