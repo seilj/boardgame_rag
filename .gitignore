@@ -6,3 +6,4 @@ test/
 __pycache__/
 .python-version
 TODO.txt
+.venv

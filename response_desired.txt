@@ -1,0 +1,73 @@
+{
+  "minplayers": [
+    "2"
+  ],
+  "maxplayers": [
+    "4"
+  ],
+  "playingtime": [
+    "120"
+  ],
+  "minplaytime": [
+    "60"
+  ],
+  "maxplaytime": [
+    "120"
+  ],
+  "age": [
+    "14"
+  ],
+  "name": [
+    "Brass: Birmingham",
+    "Brass. Бирмингем",
+    "Brass. Бірмінгем",
+    "ブラス：バーミンガム",
+    "工业革命：伯明翰(Chinese edition) (2018)",
+    "工業革命：伯明翰",
+    "브라스: 버밍엄"
+  ],
+  "thumbnail": [
+    "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__thumb/img/o18rjEemoWaVru9Y2TyPwuIaRfE=/fit-in/200x150/filters:strip_icc()/pic3490053.jpg"
+  ],
+  "image": [
+    "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg"
+  ],
+  "boardgamecategory": [
+    "Age of Reason",
+    "Economic",
+    "Industry / Manufacturing",
+    "Post-Napoleonic",
+    "Trains",
+    "Transportation"
+  ],
+  "boardgamedesigner": [
+    "Gavan Brown",
+    "Matt Tolman",
+    "Martin Wallace"
+  ],
+  "boardgamemechanic": [
+    "Hand Management",
+    "Income",
+    "Loans",
+    "Market",
+    "Network and Route Building",
+    "Tags",
+    "Tech Trees / Tech Tracks",
+    "Turn Order: Stat-Based",
+    "Variable Set-up"
+  ],
+  "poll-summary": {
+    "@name": "suggested_numplayers",
+    "@title": "User Suggested Number of Players",
+    "children": [
+      {
+        "@name": "bestwith",
+        "@value": "Best with 3–4 players"
+      },
+      {
+        "@name": "recommmendedwith",
+        "@value": "Recommended with 2–4 players"
+      }
+    ]
+  }
+}

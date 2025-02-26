@@ -1,0 +1,1171 @@
+{
+  "id": 224517,
+  "parsed_data": {
+    "boardgames": {
+      "@termsofuse": "https://boardgamegeek.com/xmlapi/termsofuse",
+      "children": [
+        {
+          "boardgame": {
+            "@objectid": "224517",
+            "children": [
+              {
+                "yearpublished": {
+                  "#text": "2018"
+                }
+              },
+              {
+                "minplayers": {
+                  "#text": "2"
+                }
+              },
+              {
+                "maxplayers": {
+                  "#text": "4"
+                }
+              },
+              {
+                "playingtime": {
+                  "#text": "120"
+                }
+              },
+              {
+                "minplaytime": {
+                  "#text": "60"
+                }
+              },
+              {
+                "maxplaytime": {
+                  "#text": "120"
+                }
+              },
+              {
+                "age": {
+                  "#text": "14"
+                }
+              },
+              {
+                "name": {
+                  "@primary": "true",
+                  "@sortindex": "1",
+                  "#text": "Brass: Birmingham"
+                }
+              },
+              {
+                "name": {
+                  "@sortindex": "1",
+                  "#text": "Brass. Бирмингем"
+                }
+              },
+              {
+                "name": {
+                  "@sortindex": "1",
+                  "#text": "Brass. Бірмінгем"
+                }
+              },
+              {
+                "name": {
+                  "@sortindex": "1",
+                  "#text": "ブラス：バーミンガム"
+                }
+              },
+              {
+                "name": {
+                  "@sortindex": "1",
+                  "#text": "工业革命：伯明翰(Chinese edition) (2018)"
+                }
+              },
+              {
+                "name": {
+                  "@sortindex": "1",
+                  "#text": "工業革命：伯明翰"
+                }
+              },
+              {
+                "name": {
+                  "@sortindex": "1",
+                  "#text": "브라스: 버밍엄"
+                }
+              },
+              {
+                "description": {
+                  "#text": "Brass: Birmingham is an economic strategy game sequel to Martin Wallace's 2007 masterpiece, Brass. Brass: Birmingham tells the story of competing entrepreneurs in Birmingham during the industrial revolution between the years of 1770 and 1870.<br/><br/>It offers a very different story arc and experience from its predecessor. As in its predecessor, you must develop, build and establish your industries and network in an effort to exploit low or high market demands. The game is played over two halves: the canal era (years 1770-1830) and the rail era (years 1830-1870). To win the game, score the most VPs. VPs are counted at the end of each half for the canals, rails and established (flipped) industry tiles.<br/><br/>Each round, players take turns according to the turn order track, receiving two actions to perform any of the following actions (found in the original game):<br/><br/>1) Build - Pay required resources and place an industry tile.<br/>2) Network - Add a rail / canal link, expanding your network.<br/>3) Develop - Increase the VP value of an industry.<br/>4) Sell - Sell your cotton, manufactured goods and pottery.<br/>5) Loan - Take a &pound;30 loan and reduce your income.<br/><br/>Brass: Birmingham also features a new sixth action:<br/><br/>6) Scout - Discard three cards and take a wild location and wild industry card. (This action replaces Double Action Build in original Brass.)<br/><br/>"
+                }
+              },
+              {
+                "thumbnail": {
+                  "#text": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__thumb/img/o18rjEemoWaVru9Y2TyPwuIaRfE=/fit-in/200x150/filters:strip_icc()/pic3490053.jpg"
+                }
+              },
+              {
+                "image": {
+                  "#text": "https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "21765",
+                  "#text": "Roxley"
+                }
+              },
+              {
+                "boardgamecategory": {
+                  "@objectid": "2726",
+                  "#text": "Age of Reason"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "3475",
+                  "#text": "Arclight Games"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "468697",
+                  "#text": "BGT056 - BGG Top 100: Brass"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "44580",
+                  "#text": "Board Game Rookie"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "25074",
+                  "#text": "BoardM Factory"
+                }
+              },
+              {
+                "boardgamedesigner": {
+                  "@objectid": "32887",
+                  "#text": "Gavan Brown"
+                }
+              },
+              {
+                "boardgameartist": {
+                  "@objectid": "32887",
+                  "#text": "Gavan Brown"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "523778",
+                  "#text": "Chinese edition"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "17519",
+                  "#text": "Cities: Birmingham (England)"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "21608",
+                  "#text": "CMON Global Limited"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "81601",
+                  "#text": "Components: Map (Regional scale)"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "65191",
+                  "#text": "Components: Multi-Use Cards"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "11043",
+                  "#text": "Conclave Editora"
+                }
+              },
+              {
+                "boardgameartist": {
+                  "@objectid": "70571",
+                  "#text": "Lina Cossette"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "14759",
+                  "#text": "Country: England"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "34522",
+                  "#text": "CrowD Games"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "8374",
+                  "#text": "Crowdfunding: Kickstarter"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "22135",
+                  "#text": "Crowdfunding: Spieleschmiede"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "712133",
+                  "#text": "Czech edition 2024"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "745587",
+                  "#text": "Czech edition 2025"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "558467",
+                  "#text": "Czech/English edition, first printing"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "712131",
+                  "#text": "Czech/English edition, second printing"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "712132",
+                  "#text": "Czech/English edition, third printing"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "31071",
+                  "#text": "Dexker Games"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "77349",
+                  "#text": "Digital Implementations: Steam"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "70948",
+                  "#text": "Digital Implementations: Tabletopia"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "81575",
+                  "#text": "Digital Implementations: VASSAL"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "665397",
+                  "#text": "Dutch edition"
+                }
+              },
+              {
+                "boardgamecategory": {
+                  "@objectid": "1021",
+                  "#text": "Economic"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "417443",
+                  "#text": "English deluxe edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "351052",
+                  "#text": "English retail edition"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "252168",
+                  "#text": "Ep 070 &ndash; 3rd Anniversary Special &amp; Tournament to the Death!!!"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "377454",
+                  "#text": "Ep 33- A Christmas Trainwreck &amp; An Important Announcement"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "256158",
+                  "#text": "Ep. 13 - Brass: Lancashire &amp; Brass: Birmingham"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "261153",
+                  "#text": "Ep14: Brass Brass Brass Brass (Brass Birmingham)"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "446291",
+                  "#text": "Episode 021: Number One on the Charts"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "473319",
+                  "#text": "Episode 108: Brass Birmingham, Endless Winter, Beer &amp; Bread, Brew, Nana - Top 10 Games Of All Time 5-1"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "360734",
+                  "#text": "Episode 11: Tash Kalar, Smash Up, Super Fantasy Brawl, Teotihuacan: City of Gods"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "268137",
+                  "#text": "Episode 110 - Interview with Jonathan Ying"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "282891",
+                  "#text": "Episode 12 – Three Mississippi"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "339403",
+                  "#text": "Episode 123 :: The Best Board Games of SaltCon 2020"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "360731",
+                  "#text": "Episode 14: War Chest, Call To Adventure, Bob's Your Uncle"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "391320",
+                  "#text": "Episode 145 :: Joy of the Stick"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "421921",
+                  "#text": "Episode 2: Praga Caput Regni"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "457588",
+                  "#text": "Episode 206: Chronicles of Drunagor: Age of Darkness, Victory Through Industry, Terracotta Army"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "413028",
+                  "#text": "Episode 22 - Our Favorite 5 Boardgames"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "465586",
+                  "#text": "Episode 28: Top 30 Countdown, Part III (10-1)"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "537135",
+                  "#text": "Episode 30: Networking Titans: Brass: Birmingham vs Nucleum"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "342418",
+                  "#text": "Episode 34 – Double the Brass"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "254992",
+                  "#text": "Episode 37 - See Ya Later Bud"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "205088",
+                  "#text": "Episode 49 :: Vast Review + Watch it Played &amp; The Secret Cabal"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "360740",
+                  "#text": "Episode 5 - Brass: Birmingham, King of Tokyo: Dark Edition, Awkward Guests"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "26397",
+                  "#text": "Food & Drink: Beer"
+                }
+              },
+              {
+                "boardgameartist": {
+                  "@objectid": "70568",
+                  "#text": "David Forest"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "435701",
+                  "#text": "French edition"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "8832",
+                  "#text": "Funforge"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "57499",
+                  "#text": "Game: Brass"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "8820",
+                  "#text": "Gém Klub Kft."
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "679588",
+                  "#text": "German Deluxe edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "716304",
+                  "#text": "German edition 2024"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "491771",
+                  "#text": "German first edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "645968",
+                  "#text": "German second edition"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "4785",
+                  "#text": "Ghenos Games"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "42147",
+                  "#text": "Giant Roc"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2040",
+                  "#text": "Hand Management"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "50152",
+                  "#text": "History: Industrial Revolution"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "255049",
+                  "#text": "HLG 51: Jumbo"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "262066",
+                  "#text": "HLG 54: Spiel &amp; HLG Speeldag"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "339336",
+                  "#text": "HLG 86: Corona &amp; Online Bordspellen"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "512824",
+                  "#text": "Hungarian edition"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2902",
+                  "#text": "Income"
+                }
+              },
+              {
+                "boardgamecategory": {
+                  "@objectid": "1088",
+                  "#text": "Industry / Manufacturing"
+                }
+              },
+              {
+                "boardgameaccessory": {
+                  "@objectid": "233281",
+                  "#text": "Iron Clays"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "470849",
+                  "#text": "Italian edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "520878",
+                  "#text": "Japanese edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "471199",
+                  "#text": "Korean edition"
+                }
+              },
+              {
+                "boardgameartist": {
+                  "@objectid": "140907",
+                  "#text": "Gui Landgraf"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "36210",
+                  "#text": "Lanlalen"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2904",
+                  "#text": "Loans"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "46500",
+                  "#text": "Lord of Boards"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "30677",
+                  "#text": "Maldito Games"
+                }
+              },
+              {
+                "boardgameartist": {
+                  "@objectid": "38179",
+                  "#text": "Damien Mammoliti"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2900",
+                  "#text": "Market"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "297143",
+                  "#text": "MeepleCore Podcast Episode 77 - Origins 2019 recap, Top 5 board game components, Brass Birmingham, and more!"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "59705",
+                  "#text": "Misc: LongPack Games"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "78198",
+                  "#text": "Misc: Watch It Played How To Videos"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "448796",
+                  "#text": "N°130 – Chroniques"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2081",
+                  "#text": "Network and Route Building"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "81586",
+                  "#text": "Occupation: Engineer"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "4705",
+                  "#text": "Organizations: The Game Artisans of Canada"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "36186",
+                  "#text": "PHALANX"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "442357",
+                  "#text": "PHALANX Polish edition, first printing"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "566817",
+                  "#text": "PHALANX Polish edition, second printing with awards"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "459032",
+                  "#text": "Portuguese edition"
+                }
+              },
+              {
+                "boardgamecategory": {
+                  "@objectid": "2710",
+                  "#text": "Post-Napoleonic"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "268980",
+                  "#text": "RDTN Episode 159: Brass, Newton, BGG Con"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "657836",
+                  "#text": "Rebel Polish edition"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "7466",
+                  "#text": "Rebel Sp. z o.o."
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "389051",
+                  "#text": "Russian edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "742708",
+                  "#text": "Spanish deluxe edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "447132",
+                  "#text": "Spanish edition"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "722810",
+                  "#text": "Spanish edition 2024"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "531517",
+                  "#text": "Special Episode 23: Summer Flings: Games We Love Right Now!"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "380348",
+                  "#text": "Spildesign a la Wallace"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "272671",
+                  "#text": "Strange Assembly 252 - Game of the Year 2017-2018"
+                }
+              },
+              {
+                "boardgamesubdomain": {
+                  "@objectid": "5497",
+                  "#text": "Strategy Games"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "3100",
+                  "#text": "Tags"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2849",
+                  "#text": "Tech Trees / Tech Tracks"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "651873",
+                  "#text": "Thai edition"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "328968",
+                  "#text": "The Dice Men Cometh – Episode 290"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "259645",
+                  "#text": "The Game Pit: Episode 115 - Reviews and Brass Discussion with Pouria"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "206308",
+                  "#text": "THE GAME PIT: EPISODE 84 - BATTLE REPORT FROM LOBSTERCON XIII"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "254676",
+                  "#text": "The Good the Board and the Movers and Dice Shakers Episode 177 David Joins Us from Paradise aka Salt Lake City (Or Close to It At Least)"
+                }
+              },
+              {
+                "boardgamepodcastepisode": {
+                  "@objectid": "461936",
+                  "#text": "The Legend of Brass Birmingham - TTSP Ep. 4"
+                }
+              },
+              {
+                "boardgamefamily": {
+                  "@objectid": "66445",
+                  "#text": "Theme: Canals"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "41423",
+                  "#text": "TLAMA games"
+                }
+              },
+              {
+                "boardgamedesigner": {
+                  "@objectid": "32943",
+                  "#text": "Matt Tolman"
+                }
+              },
+              {
+                "boardgameartist": {
+                  "@objectid": "32943",
+                  "#text": "Matt Tolman"
+                }
+              },
+              {
+                "boardgamecategory": {
+                  "@objectid": "1034",
+                  "#text": "Trains"
+                }
+              },
+              {
+                "boardgamecategory": {
+                  "@objectid": "1011",
+                  "#text": "Transportation"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2826",
+                  "#text": "Turn Order: Stat-Based"
+                }
+              },
+              {
+                "boardgameversion": {
+                  "@objectid": "538284",
+                  "#text": "Ukrainian edition"
+                }
+              },
+              {
+                "boardgamemechanic": {
+                  "@objectid": "2897",
+                  "#text": "Variable Set-up"
+                }
+              },
+              {
+                "boardgamedesigner": {
+                  "@objectid": "6",
+                  "#text": "Martin Wallace"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "4932",
+                  "#text": "White Goblin Games"
+                }
+              },
+              {
+                "boardgamepublisher": {
+                  "@objectid": "54777",
+                  "#text": "盒拍工作室 Hepa Studio"
+                }
+              },
+              {
+                "boardgameimplementation": {
+                  "@objectid": "28720",
+                  "@inbound": "true",
+                  "#text": "Brass: Lancashire"
+                }
+              },
+              {
+                "poll": {
+                  "@name": "suggested_numplayers",
+                  "@title": "User Suggested Number of Players",
+                  "@totalvotes": "1219",
+                  "children": [
+                    {
+                      "results": {
+                        "@numplayers": "1",
+                        "children": [
+                          {
+                            "result": {
+                              "@value": "Best",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Recommended",
+                              "@numvotes": "60"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Not Recommended",
+                              "@numvotes": "658"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "results": {
+                        "@numplayers": "2",
+                        "children": [
+                          {
+                            "result": {
+                              "@value": "Best",
+                              "@numvotes": "121"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Recommended",
+                              "@numvotes": "774"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Not Recommended",
+                              "@numvotes": "155"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "results": {
+                        "@numplayers": "3",
+                        "children": [
+                          {
+                            "result": {
+                              "@value": "Best",
+                              "@numvotes": "654"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Recommended",
+                              "@numvotes": "394"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Not Recommended",
+                              "@numvotes": "16"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "results": {
+                        "@numplayers": "4",
+                        "children": [
+                          {
+                            "result": {
+                              "@value": "Best",
+                              "@numvotes": "655"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Recommended",
+                              "@numvotes": "333"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Not Recommended",
+                              "@numvotes": "44"
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "results": {
+                        "@numplayers": "4+",
+                        "children": [
+                          {
+                            "result": {
+                              "@value": "Best",
+                              "@numvotes": "1"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Recommended",
+                              "@numvotes": "6"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "Not Recommended",
+                              "@numvotes": "546"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "poll-summary": {
+                  "@name": "suggested_numplayers",
+                  "@title": "User Suggested Number of Players",
+                  "children": [
+                    {
+                      "result": {
+                        "@name": "bestwith",
+                        "@value": "Best with 3–4 players"
+                      }
+                    },
+                    {
+                      "result": {
+                        "@name": "recommmendedwith",
+                        "@value": "Recommended with 2–4 players"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "poll": {
+                  "@name": "language_dependence",
+                  "@title": "Language Dependence",
+                  "@totalvotes": "54",
+                  "children": [
+                    {
+                      "results": {
+                        "children": [
+                          {
+                            "result": {
+                              "@level": "1",
+                              "@value": "No necessary in-game text",
+                              "@numvotes": "52"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@level": "2",
+                              "@value": "Some necessary text - easily memorized or small crib sheet",
+                              "@numvotes": "2"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@level": "3",
+                              "@value": "Moderate in-game text - needs crib sheet or paste ups",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@level": "4",
+                              "@value": "Extensive use of text - massive conversion needed to be playable",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@level": "5",
+                              "@value": "Unplayable in another language",
+                              "@numvotes": "0"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "poll": {
+                  "@name": "suggested_playerage",
+                  "@title": "User Suggested Player Age",
+                  "@totalvotes": "179",
+                  "children": [
+                    {
+                      "results": {
+                        "children": [
+                          {
+                            "result": {
+                              "@value": "2",
+                              "@numvotes": "1"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "3",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "4",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "5",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "6",
+                              "@numvotes": "0"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "8",
+                              "@numvotes": "6"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "10",
+                              "@numvotes": "13"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "12",
+                              "@numvotes": "39"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "14",
+                              "@numvotes": "91"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "16",
+                              "@numvotes": "27"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "18",
+                              "@numvotes": "2"
+                            }
+                          },
+                          {
+                            "result": {
+                              "@value": "21 and up",
+                              "@numvotes": "0"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "raw_xml": "<boardgames termsofuse=\"https://boardgamegeek.com/xmlapi/termsofuse\">\n\t\t\t<boardgame objectid=\"224517\">\n   <yearpublished>2018</yearpublished>\n   <minplayers>2</minplayers>\n   <maxplayers>4</maxplayers>\n   <playingtime>120</playingtime>\n   <minplaytime>60</minplaytime>\n   <maxplaytime>120</maxplaytime>\n   <age>14</age>\n\n   \t   <name primary=\"true\" sortindex=\"1\">Brass: Birmingham</name>\n   \t   <name  sortindex=\"1\">Brass. Бирмингем</name>\n   \t   <name  sortindex=\"1\">Brass. Бірмінгем</name>\n   \t   <name  sortindex=\"1\">ブラス：バーミンガム</name>\n   \t   <name  sortindex=\"1\">工业革命：伯明翰(Chinese edition) (2018)</name>\n   \t   <name  sortindex=\"1\">工業革命：伯明翰</name>\n   \t   <name  sortindex=\"1\">브라스: 버밍엄</name>\n   \n   <description>Brass: Birmingham is an economic strategy game sequel to Martin Wallace&#039;s 2007 masterpiece, Brass. Brass: Birmingham tells the story of competing entrepreneurs in Birmingham during the industrial revolution between the years of 1770 and 1870.&lt;br/&gt;&lt;br/&gt;It offers a very different story arc and experience from its predecessor. As in its predecessor, you must develop, build and establish your industries and network in an effort to exploit low or high market demands. The game is played over two halves: the canal era (years 1770-1830) and the rail era (years 1830-1870). To win the game, score the most VPs. VPs are counted at the end of each half for the canals, rails and established (flipped) industry tiles.&lt;br/&gt;&lt;br/&gt;Each round, players take turns according to the turn order track, receiving two actions to perform any of the following actions (found in the original game):&lt;br/&gt;&lt;br/&gt;1) Build - Pay required resources and place an industry tile.&lt;br/&gt;2) Network - Add a rail / canal link, expanding your network.&lt;br/&gt;3) Develop - Increase the VP value of an industry.&lt;br/&gt;4) Sell - Sell your cotton, manufactured goods and pottery.&lt;br/&gt;5) Loan - Take a &amp;pound;30 loan and reduce your income.&lt;br/&gt;&lt;br/&gt;Brass: Birmingham also features a new sixth action:&lt;br/&gt;&lt;br/&gt;6) Scout - Discard three cards and take a wild location and wild industry card. (This action replaces Double Action Build in original Brass.)&lt;br/&gt;&lt;br/&gt;</description>\n\n   \t   <thumbnail>https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__thumb/img/o18rjEemoWaVru9Y2TyPwuIaRfE=/fit-in/200x150/filters:strip_icc()/pic3490053.jpg</thumbnail>\n\t   <image>https://cf.geekdo-images.com/x3zxjr-Vw5iU4yDPg70Jgw__original/img/FpyxH41Y6_ROoePAilPNEhXnzO8=/0x0/filters:format(jpeg)/pic3490053.jpg</image>\n   \n   \t   \t\t   <boardgameaccessory objectid=\"334571\">Brass: Birmingham / Lancashire – reDrewno Insert</boardgameaccessory>\n      \t   \t\t   <boardgamepublisher objectid=\"21765\">Roxley</boardgamepublisher>\n      \t   \t\t   <cardset objectid=\"83784\"></cardset>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"205004\">#44: Anachrony six-pack review and on tap; Fugitive; Valeria Card Kingdoms; Veggie Garden</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"276930\">#54: Talon and Table Talk</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"286111\">#63: Hype Men</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"507855\">114 the DDP team’s best games of 2023</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"390312\">12: Fun in the Sun (Beyond the Sun, Brass, Robinson Crusoe)</boardgamepodcastepisode>\n      \t   \t\t   <boardgamehonor objectid=\"61830\">2018 Board Game Quest Awards Best Production Values Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"61842\">2018 Board Game Quest Awards Best Production Values Winner</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"61831\">2018 Board Game Quest Awards Best Strategy/Euro Game Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"55549\">2018 Golden Geek Best Board Game Artwork &amp; Presentation Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"55559\">2018 Golden Geek Best Strategy Board Game Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"55718\">2018 Golden Geek Best Strategy Board Game Winner</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"55547\">2018 Golden Geek Board Game of the Year Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"64690\">2018 Meeples Choice Award Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"64689\">2018 Meeples Choice Award Winner</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"64680\">2018 The Golden Elephant Award Best Heavy Board Game Winner</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"64681\">2018 The Golden Elephant Award Finalist</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"64679\">2018 The Golden Elephant Award People&#039;s Choice Winner</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"73364\">2019 American Tabletop Complex Games Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"58912\">2019 International Gamers Award - General Strategy: Multi-player Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"74286\">2019 Kanga Game of the Year Finalist</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"56191\">2019 Origins Awards Best Board Game Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"65041\">2020 Gra Roku Advanced Game of the Year Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"66892\">2020 Gra Roku Advanced Game of the Year Winner</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"66899\">2020 Gra Roku Game of the Year Nominee</boardgamehonor>\n      \t   \t\t   <boardgamehonor objectid=\"66898\">2020 Gra Roku Game of the Year Winner</boardgamehonor>\n      \t   \t\t   <boardgamecategory objectid=\"2726\">Age of Reason</boardgamecategory>\n      \t      \t   \t\t   <boardgamepublisher objectid=\"3475\">Arclight Games</boardgamepublisher>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"468697\">BGT056 - BGG Top 100: Brass</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepublisher objectid=\"44580\">Board Game Rookie</boardgamepublisher>\n      \t   \t\t   <boardgamepublisher objectid=\"25074\">BoardM Factory</boardgamepublisher>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"499749\">Brass</boardgamepodcastepisode>\n      \t   \t\t   <videogamebg objectid=\"356820\">Brass: Birmingham</videogamebg>\n      \t      \t      \t      \t   \t\t   <boardgameaccessory objectid=\"399634\">Brass: Birmingham – BGExpansions Upgrade Kit</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"439465\">Brass: Birmingham – Česká pravidla a nápovědy</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"309493\">Brass: Birmingham – e-Raptor Insert</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"347407\">Brass: Birmingham – Game Tamer Organizer</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"419962\">Brass: Birmingham – Inserty Herman Insert</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"430615\">Brass: Birmingham – Iron Clays Upgrade</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"339385\">Brass: Birmingham – Laserox Organizer</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"420437\">Brass: Birmingham – Playmat</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"373838\">Brass: Birmingham – Spike Craft Insert</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"350761\">Brass: Birmingham – The Dicetroyers Organizer</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"348604\">Brass: Birmingham – The GiftForge Insert</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"432279\">Brass: Birmingham – Tokens Garden Metal Coins</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"340345\">Brass: Birmingham – TowerRex Organizer</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"428779\">Brass: Birmingham – Upended Games Organizer</boardgameaccessory>\n      \t      \t   \t\t   <boardgameaccessory objectid=\"347851\">Brass: Birmingham / Lancashire – Eurohell Design Insert</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"306354\">Brass: Birmingham / Lancashire – Folded Space Insert</boardgameaccessory>\n      \t      \t      \t      \t      \t      \t      \t      \t   \t\t   <boardgameaccessory objectid=\"328775\">Brass: Coin-Cases</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"349935\">Brass: Eurohell Design 3D Locomotive &amp; Barge Upgrade</boardgameaccessory>\n      \t   \t\t   <boardgameaccessory objectid=\"268234\">Brass: Meeple Realty Insert</boardgameaccessory>\n      \t      \t   \t\t   <boardgamedesigner objectid=\"32887\">Gavan Brown</boardgamedesigner>\n      \t   \t\t   <boardgameartist objectid=\"32887\">Gavan Brown</boardgameartist>\n      \t   \t\t   <boardgameversion objectid=\"523778\">Chinese edition</boardgameversion>\n      \t   \t\t   <boardgamefamily objectid=\"17519\">Cities: Birmingham (England)</boardgamefamily>\n      \t   \t\t   <boardgamepublisher objectid=\"21608\">CMON Global Limited</boardgamepublisher>\n      \t   \t\t   <boardgamefamily objectid=\"81601\">Components: Map (Regional scale)</boardgamefamily>\n      \t   \t\t   <boardgamefamily objectid=\"65191\">Components: Multi-Use Cards</boardgamefamily>\n      \t   \t\t   <boardgamepublisher objectid=\"11043\">Conclave Editora</boardgamepublisher>\n      \t   \t\t   <boardgameartist objectid=\"70571\">Lina Cossette</boardgameartist>\n      \t   \t\t   <boardgamefamily objectid=\"14759\">Country: England</boardgamefamily>\n      \t   \t\t   <boardgamepublisher objectid=\"34522\">CrowD Games</boardgamepublisher>\n      \t   \t\t   <boardgamefamily objectid=\"8374\">Crowdfunding: Kickstarter</boardgamefamily>\n      \t   \t\t   <boardgamefamily objectid=\"22135\">Crowdfunding: Spieleschmiede</boardgamefamily>\n      \t   \t\t   <boardgameversion objectid=\"712133\">Czech edition 2024</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"745587\">Czech edition 2025</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"558467\">Czech/English edition, first printing</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"712131\">Czech/English edition, second printing</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"712132\">Czech/English edition, third printing</boardgameversion>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"494153\">DDP 105 A Question of Cardboard, Castles of Burgundy (2019) vs Castles of Burgundy Special Ed</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"449677\">DDP 85. The Boys are Back,.. Back again...</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"466410\">DDP 90. the one before Christmas. Heat Pedal to the Metal,</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"469038\">DDP 92. Top 5 list of the Best Board Games played in 2022</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"472561\">DDP 95 Review of Earth...or will it be, and more</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"474082\">DDP 96. It’s a CON...vention, North Devon weekend and AireCon</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"476123\">DDP 97, Top Games we only want to play on BGA</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"480425\">DDP 98 Brass Birmingham Review and more</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"453019\">DDP. 86 Clank Catacombs, Living Forest, Puerto Rico 1897, Moon</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"445411\">Der Große Wurf #76 - Brass: Birmingham</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepublisher objectid=\"31071\">Dexker Games</boardgamepublisher>\n      \t   \t\t   <boardgamefamily objectid=\"77349\">Digital Implementations: Steam</boardgamefamily>\n      \t   \t\t   <boardgamefamily objectid=\"70948\">Digital Implementations: Tabletopia</boardgamefamily>\n      \t   \t\t   <boardgamefamily objectid=\"81575\">Digital Implementations: VASSAL</boardgamefamily>\n      \t   \t\t   <boardgameversion objectid=\"665397\">Dutch edition</boardgameversion>\n      \t      \t   \t\t   <boardgamecategory objectid=\"1021\">Economic</boardgamecategory>\n      \t   \t\t   <boardgameversion objectid=\"417443\">English deluxe edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"351052\">English retail edition</boardgameversion>\n      \t      \t   \t\t   <boardgamepodcastepisode objectid=\"252168\">Ep 070 &amp;ndash; 3rd Anniversary Special &amp;amp; Tournament to the Death!!!</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"377454\">Ep 33- A Christmas Trainwreck &amp;amp; An Important Announcement</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"256158\">Ep. 13 - Brass: Lancashire &amp;amp; Brass: Birmingham</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"261153\">Ep14: Brass Brass Brass Brass (Brass Birmingham)</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"446291\">Episode 021: Number One on the Charts</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"473319\">Episode 108: Brass Birmingham, Endless Winter, Beer &amp;amp; Bread, Brew, Nana - Top 10 Games Of All Time 5-1</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"360734\">Episode 11: Tash Kalar, Smash Up, Super Fantasy Brawl, Teotihuacan: City of Gods</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"268137\">Episode 110 - Interview with Jonathan Ying</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"282891\">Episode 12 – Three Mississippi</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"339403\">Episode 123 :: The Best Board Games of SaltCon 2020</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"360731\">Episode 14: War Chest, Call To Adventure, Bob&#039;s Your Uncle</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"391320\">Episode 145 :: Joy of the Stick</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"421921\">Episode 2: Praga Caput Regni</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"457588\">Episode 206: Chronicles of Drunagor: Age of Darkness, Victory Through Industry, Terracotta Army</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"413028\">Episode 22 - Our Favorite 5 Boardgames</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"465586\">Episode 28: Top 30 Countdown, Part III (10-1)</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"537135\">Episode 30: Networking Titans: Brass: Birmingham vs Nucleum</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"342418\">Episode 34 – Double the Brass</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"254992\">Episode 37 - See Ya Later Bud</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"205088\">Episode 49 :: Vast Review + Watch it Played &amp;amp; The Secret Cabal</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"360740\">Episode 5 - Brass: Birmingham, King of Tokyo: Dark Edition, Awkward Guests</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"290352\">Episode 55 - Reality Con 2019 (Part 2)</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"299300\">Episode 65: Sekigahara, Roll to the Top, Brass: Birmingham, Extra!, Villagers</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"360738\">Episode 7: Everdell, Imperial Settlers: Empires of the North, Clans of Caledonia</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"267176\">Episode 89 :: The Re-Envisioning</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"463573\">Expansions Are Overrated - TTSP Ep. 5</boardgamepodcastepisode>\n      \t      \t   \t\t   <boardgamefamily objectid=\"26397\">Food &amp; Drink: Beer</boardgamefamily>\n      \t   \t\t   <boardgameartist objectid=\"70568\">David Forest</boardgameartist>\n      \t   \t\t   <boardgameversion objectid=\"435701\">French edition</boardgameversion>\n      \t   \t\t   <boardgamepublisher objectid=\"8832\">Funforge</boardgamepublisher>\n      \t      \t   \t\t   <boardgamefamily objectid=\"57499\">Game: Brass</boardgamefamily>\n      \t   \t\t   <boardgamepublisher objectid=\"8820\">Gém Klub Kft.</boardgamepublisher>\n      \t   \t\t   <boardgameversion objectid=\"679588\">German Deluxe edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"716304\">German edition 2024</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"491771\">German first edition</boardgameversion>\n      \t      \t   \t\t   <boardgameversion objectid=\"645968\">German second edition</boardgameversion>\n      \t   \t\t   <boardgamepublisher objectid=\"4785\">Ghenos Games</boardgamepublisher>\n      \t   \t\t   <boardgamepublisher objectid=\"42147\">Giant Roc</boardgamepublisher>\n      \t   \t\t   <boardgamemechanic objectid=\"2040\">Hand Management</boardgamemechanic>\n      \t   \t\t   <boardgamefamily objectid=\"50152\">History: Industrial Revolution</boardgamefamily>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"255049\">HLG 51: Jumbo</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"262066\">HLG 54: Spiel &amp;amp; HLG Speeldag</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"339336\">HLG 86: Corona &amp;amp; Online Bordspellen</boardgamepodcastepisode>\n      \t   \t\t   <boardgameversion objectid=\"512824\">Hungarian edition</boardgameversion>\n      \t   \t\t   <boardgamemechanic objectid=\"2902\">Income</boardgamemechanic>\n      \t   \t\t   <boardgamecategory objectid=\"1088\">Industry / Manufacturing</boardgamecategory>\n      \t   \t\t   <boardgameaccessory objectid=\"233281\">Iron Clays</boardgameaccessory>\n      \t   \t\t   <boardgameversion objectid=\"470849\">Italian edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"520878\">Japanese edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"471199\">Korean edition</boardgameversion>\n      \t   \t\t   <boardgameartist objectid=\"140907\">Gui Landgraf</boardgameartist>\n      \t   \t\t   <boardgamepublisher objectid=\"36210\">Lanlalen</boardgamepublisher>\n      \t   \t\t   <boardgamemechanic objectid=\"2904\">Loans</boardgamemechanic>\n      \t   \t\t   <boardgamepublisher objectid=\"46500\">Lord of Boards</boardgamepublisher>\n      \t   \t\t   <boardgamepublisher objectid=\"30677\">Maldito Games</boardgamepublisher>\n      \t   \t\t   <boardgameartist objectid=\"38179\">Damien Mammoliti</boardgameartist>\n      \t   \t\t   <boardgamemechanic objectid=\"2900\">Market</boardgamemechanic>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"297143\">MeepleCore Podcast Episode 77 - Origins 2019 recap, Top 5 board game components, Brass Birmingham, and more!</boardgamepodcastepisode>\n      \t   \t\t   <boardgamefamily objectid=\"59705\">Misc: LongPack Games</boardgamefamily>\n      \t   \t\t   <boardgamefamily objectid=\"78198\">Misc: Watch It Played How To Videos</boardgamefamily>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"448796\">N°130 – Chroniques</boardgamepodcastepisode>\n      \t      \t   \t\t   <boardgamemechanic objectid=\"2081\">Network and Route Building</boardgamemechanic>\n      \t   \t\t   <boardgamefamily objectid=\"81586\">Occupation: Engineer</boardgamefamily>\n      \t   \t\t   <boardgamefamily objectid=\"4705\">Organizations: The Game Artisans of Canada</boardgamefamily>\n      \t   \t\t   <boardgamepublisher objectid=\"36186\">PHALANX</boardgamepublisher>\n      \t   \t\t   <boardgameversion objectid=\"442357\">PHALANX Polish edition, first printing</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"566817\">PHALANX Polish edition, second printing with awards</boardgameversion>\n      \t      \t      \t   \t\t   <boardgameversion objectid=\"459032\">Portuguese edition</boardgameversion>\n      \t   \t\t   <boardgamecategory objectid=\"2710\">Post-Napoleonic</boardgamecategory>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"268980\">RDTN Episode 159: Brass, Newton, BGG Con</boardgamepodcastepisode>\n      \t   \t\t   <boardgameversion objectid=\"657836\">Rebel Polish edition</boardgameversion>\n      \t   \t\t   <boardgamepublisher objectid=\"7466\">Rebel Sp. z o.o.</boardgamepublisher>\n      \t      \t      \t      \t      \t      \t      \t   \t\t   <boardgameversion objectid=\"389051\">Russian edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"742708\">Spanish deluxe edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"447132\">Spanish edition</boardgameversion>\n      \t   \t\t   <boardgameversion objectid=\"722810\">Spanish edition 2024</boardgameversion>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"531517\">Special Episode 23: Summer Flings: Games We Love Right Now!</boardgamepodcastepisode>\n      \t      \t      \t   \t\t   <boardgamepodcastepisode objectid=\"380348\">Spildesign a la Wallace</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"272671\">Strange Assembly 252 - Game of the Year 2017-2018</boardgamepodcastepisode>\n      \t   \t\t   <boardgamesubdomain objectid=\"5497\">Strategy Games</boardgamesubdomain>\n      \t   \t\t   <boardgamemechanic objectid=\"3100\">Tags</boardgamemechanic>\n      \t   \t\t   <boardgamemechanic objectid=\"2849\">Tech Trees / Tech Tracks</boardgamemechanic>\n      \t   \t\t   <boardgameversion objectid=\"651873\">Thai edition</boardgameversion>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"328968\">The Dice Men Cometh – Episode 290</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"259645\">The Game Pit: Episode 115 - Reviews and Brass Discussion with Pouria</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"206308\">THE GAME PIT: EPISODE 84 - BATTLE REPORT FROM LOBSTERCON XIII</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"254676\">The Good the Board and the Movers and Dice Shakers Episode 177 David Joins Us from Paradise aka Salt Lake City (Or Close to It At Least)</boardgamepodcastepisode>\n      \t   \t\t   <boardgamepodcastepisode objectid=\"461936\">The Legend of Brass Birmingham - TTSP Ep. 4</boardgamepodcastepisode>\n      \t   \t\t   <boardgamefamily objectid=\"66445\">Theme: Canals</boardgamefamily>\n      \t   \t\t   <boardgamepublisher objectid=\"41423\">TLAMA games</boardgamepublisher>\n      \t   \t\t   <boardgamedesigner objectid=\"32943\">Matt Tolman</boardgamedesigner>\n      \t   \t\t   <boardgameartist objectid=\"32943\">Matt Tolman</boardgameartist>\n      \t   \t\t   <boardgamecategory objectid=\"1034\">Trains</boardgamecategory>\n      \t   \t\t   <boardgamecategory objectid=\"1011\">Transportation</boardgamecategory>\n      \t   \t\t   <boardgamemechanic objectid=\"2826\">Turn Order: Stat-Based</boardgamemechanic>\n      \t   \t\t   <boardgameversion objectid=\"538284\">Ukrainian edition</boardgameversion>\n      \t   \t\t   <boardgamemechanic objectid=\"2897\">Variable Set-up</boardgamemechanic>\n      \t      \t   \t\t   <boardgamedesigner objectid=\"6\">Martin Wallace</boardgamedesigner>\n      \t   \t\t   <boardgamepublisher objectid=\"4932\">White Goblin Games</boardgamepublisher>\n      \t   \t\t   <boardgamepublisher objectid=\"54777\">盒拍工作室 Hepa Studio</boardgamepublisher>\n      \t   \t\t   <boardgameimplementation objectid=\"28720\" inbound=\"true\">Brass: Lancashire</boardgameimplementation>\n      \n   <poll name=\"suggested_numplayers\" title=\"User Suggested Number of Players\" totalvotes=\"1219\">\n\t\t\t\n\t\t<results numplayers=\"1\">\t\t\n\t\t\t\t\t<result value=\"Best\" numvotes=\"0\" />\n\t\t\t\t\t<result value=\"Recommended\" numvotes=\"60\" />\n\t\t\t\t\t<result value=\"Not Recommended\" numvotes=\"658\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t\t\t\n\t\t<results numplayers=\"2\">\t\t\n\t\t\t\t\t<result value=\"Best\" numvotes=\"121\" />\n\t\t\t\t\t<result value=\"Recommended\" numvotes=\"774\" />\n\t\t\t\t\t<result value=\"Not Recommended\" numvotes=\"155\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t\t\t\n\t\t<results numplayers=\"3\">\t\t\n\t\t\t\t\t<result value=\"Best\" numvotes=\"654\" />\n\t\t\t\t\t<result value=\"Recommended\" numvotes=\"394\" />\n\t\t\t\t\t<result value=\"Not Recommended\" numvotes=\"16\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t\t\t\n\t\t<results numplayers=\"4\">\t\t\n\t\t\t\t\t<result value=\"Best\" numvotes=\"655\" />\n\t\t\t\t\t<result value=\"Recommended\" numvotes=\"333\" />\n\t\t\t\t\t<result value=\"Not Recommended\" numvotes=\"44\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t\t\t\n\t\t<results numplayers=\"4+\">\t\t\n\t\t\t\t\t<result value=\"Best\" numvotes=\"1\" />\n\t\t\t\t\t<result value=\"Recommended\" numvotes=\"6\" />\n\t\t\t\t\t<result value=\"Not Recommended\" numvotes=\"546\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t</poll>\n<poll-summary name=\"suggested_numplayers\"  title=\"User Suggested Number of Players\">\n  <result name=\"bestwith\" value=\"Best with 3–4 players\" />\n  <result name=\"recommmendedwith\" value=\"Recommended with 2–4 players\" />\n</poll-summary>\n\n   <poll name=\"language_dependence\" title=\"Language Dependence\" totalvotes=\"54\">\n\t\t\t\n\t\t<results>\t\t\n\t\t\t\t\t<result level=\"1\" value=\"No necessary in-game text\" numvotes=\"52\" />\n\t\t\t\t\t<result level=\"2\" value=\"Some necessary text - easily memorized or small crib sheet\" numvotes=\"2\" />\n\t\t\t\t\t<result level=\"3\" value=\"Moderate in-game text - needs crib sheet or paste ups\" numvotes=\"0\" />\n\t\t\t\t\t<result level=\"4\" value=\"Extensive use of text - massive conversion needed to be playable\" numvotes=\"0\" />\n\t\t\t\t\t<result level=\"5\" value=\"Unplayable in another language\" numvotes=\"0\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t</poll>\n\n   <poll name=\"suggested_playerage\" title=\"User Suggested Player Age\" totalvotes=\"179\">\n\t\t\t<results>\t\t\n\t\t\t\t\t<result value=\"2\" numvotes=\"1\" />\n\t\t\t\t\t<result value=\"3\" numvotes=\"0\" />\n\t\t\t\t\t<result value=\"4\" numvotes=\"0\" />\n\t\t\t\t\t<result value=\"5\" numvotes=\"0\" />\n\t\t\t\t\t<result value=\"6\" numvotes=\"0\" />\n\t\t\t\t\t<result value=\"8\" numvotes=\"6\" />\n\t\t\t\t\t<result value=\"10\" numvotes=\"13\" />\n\t\t\t\t\t<result value=\"12\" numvotes=\"39\" />\n\t\t\t\t\t<result value=\"14\" numvotes=\"91\" />\n\t\t\t\t\t<result value=\"16\" numvotes=\"27\" />\n\t\t\t\t\t<result value=\"18\" numvotes=\"2\" />\n\t\t\t\t\t<result value=\"21 and up\" numvotes=\"0\" />\n\t\t\t\t</results>\t\t\t\t\t\n\t</poll>\n\n\n   \n\n   \n\n</boardgame>\n\n</boardgames>\n"
+}
