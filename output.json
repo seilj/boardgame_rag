@@ -1,0 +1,207 @@
+[
+    {
+        "game_id": "135779",
+        "game_info": {
+            "thumbnail": "https://cf.geekdo-images.com/5Q5YHxJeVp6PAhfv5Ct0-g__thumb/img/nqo8xhGEWnqXYDEvYcVpBpABBI4=/fit-in/200x150/filters:strip_icc()/pic3678404.png",
+            "image": "https://cf.geekdo-images.com/5Q5YHxJeVp6PAhfv5Ct0-g__original/img/yRNioltDOtjrTRXa0HHoTTCWNf8=/0x0/filters:format(png)/pic3678404.png",
+            "name": [
+                "A Fake Artist Goes to New York",
+                "Ese Geijutsuka New York e Iku",
+                "エセ芸術家ニューヨークへ行く",
+                "가짜 예술가 뉴욕에 가다"
+            ],
+            "minplayers": "5",
+            "maxplayers": "10",
+            "suggested_playerage": null,
+            "suggested_numplayers": {
+                "bestwith": [
+                    6,
+                    7
+                ],
+                "recommendedwith": [
+                    5,
+                    10
+                ]
+            },
+            "playingtime": "20",
+            "minplaytime": "20",
+            "maxplaytime": "20",
+            "minage": "8",
+            "link": {
+                "boardgamecategory": [
+                    "Bluffing",
+                    "Deduction",
+                    "Party Game"
+                ],
+                "boardgamemechanic": [
+                    "Hidden Roles",
+                    "Line Drawing",
+                    "Targeted Clues"
+                ],
+                "boardgamedesigner": [
+                    "Jun Sasaki"
+                ]
+            },
+            "ratings": "7.12921",
+            "weight": "1.1062"
+        }
+    },
+    {
+        "game_id": "154906",
+        "game_info": {
+            "thumbnail": "https://cf.geekdo-images.com/tzEq9B-ZsUaR6ck5-S49BA__thumb/img/ItASwe8Jixi4F82eefROIPHbaD8=/fit-in/200x150/filters:strip_icc()/pic1951594.jpg",
+            "image": "https://cf.geekdo-images.com/tzEq9B-ZsUaR6ck5-S49BA__original/img/mB-obAYqX8oSuJjaAh2aAW-wUS8=/0x0/filters:format(jpeg)/pic1951594.jpg",
+            "name": [
+                "Isle of Trains",
+                "¡A todo tren!",
+                "Bummelbahn",
+                "기차섬"
+            ],
+            "minplayers": "2",
+            "maxplayers": "4",
+            "suggested_playerage": null,
+            "suggested_numplayers": {
+                "bestwith": [
+                    2
+                ],
+                "recommendedwith": [
+                    2,
+                    4
+                ]
+            },
+            "playingtime": "45",
+            "minplaytime": "45",
+            "maxplaytime": "45",
+            "minage": "13",
+            "link": {
+                "boardgamecategory": [
+                    "Card Game",
+                    "Trains",
+                    "Transportation"
+                ],
+                "boardgamemechanic": [
+                    "Action Points",
+                    "Contracts",
+                    "Hand Management",
+                    "Income",
+                    "Layering",
+                    "Modular Board",
+                    "Move Through Deck",
+                    "Multi-Use Cards",
+                    "Set Collection",
+                    "Sudden Death Ending",
+                    "Tags",
+                    "Tech Trees / Tech Tracks",
+                    "Turn Order: Progressive",
+                    "Variable Player Powers"
+                ],
+                "boardgamedesigner": [
+                    "Seth Jaffee",
+                    "Dan Keltner"
+                ]
+            },
+            "ratings": "6.73836",
+            "weight": "2.0167"
+        }
+    },
+    {
+        "game_id": "264797",
+        "game_info": {
+            "thumbnail": "https://cf.geekdo-images.com/2UT-LailJv7so2C1bYGHdQ__thumb/img/0a0iatwAfxs5MQsUGptQErPbNMY=/fit-in/200x150/filters:strip_icc()/pic4627057.png",
+            "image": "https://cf.geekdo-images.com/2UT-LailJv7so2C1bYGHdQ__original/img/ErtkAq5oUH8SSdWJraDrUFIxep0=/0x0/filters:format(png)/pic4627057.png",
+            "name": [
+                "Kushi Express",
+                "串好啦",
+                "꼬치의 달인"
+            ],
+            "minplayers": "2",
+            "maxplayers": "4",
+            "suggested_playerage": null,
+            "suggested_numplayers": {
+                "bestwith": [
+                    4
+                ],
+                "recommendedwith": [
+                    3,
+                    4
+                ]
+            },
+            "playingtime": "20",
+            "minplaytime": "20",
+            "maxplaytime": "20",
+            "minage": "6",
+            "link": {
+                "boardgamecategory": [
+                    "Action / Dexterity",
+                    "Real-time"
+                ],
+                "boardgamemechanic": [
+                    "Pattern Building"
+                ],
+                "boardgamedesigner": [
+                    "Yohan Goh"
+                ]
+            },
+            "ratings": "6.41028",
+            "weight": "1"
+        }
+    },
+    {
+        "game_id": "1465",
+        "game_info": {
+            "thumbnail": "https://cf.geekdo-images.com/ygVQlepjPxyg7IizSCM_Tw__thumb/img/1qmNhxNzPDSu_Am2rmIobVe9J1M=/fit-in/200x150/filters:strip_icc()/pic5948.jpg",
+            "image": "https://cf.geekdo-images.com/ygVQlepjPxyg7IizSCM_Tw__original/img/r4yWLAxR7Fj3Rnkry3lzSSObufQ=/0x0/filters:format(jpeg)/pic5948.jpg",
+            "name": [
+                "Wizard",
+                "Čarodej",
+                "Fantasy Wizard",
+                "Wizard Deluxe",
+                "Wizard Jubiläumsedition",
+                "Wizard: Das Schwarze Auge",
+                "Wizard: gra przepowiedni",
+                "Wizard: Μαγικοί Αριθμοί",
+                "Μαγικοί Αριθμοί",
+                "Магове",
+                "ウィザード",
+                "巫師",
+                "巫師牌",
+                "神机妙算",
+                "위자드"
+            ],
+            "minplayers": "3",
+            "maxplayers": "6",
+            "suggested_playerage": null,
+            "suggested_numplayers": {
+                "bestwith": [
+                    4,
+                    5
+                ],
+                "recommendedwith": [
+                    3,
+                    6
+                ]
+            },
+            "playingtime": "45",
+            "minplaytime": "45",
+            "maxplaytime": "45",
+            "minage": "10",
+            "link": {
+                "boardgamecategory": [
+                    "Card Game",
+                    "Fantasy"
+                ],
+                "boardgamemechanic": [
+                    "Betting and Bluffing",
+                    "Hand Management",
+                    "Predictive Bid",
+                    "Trick-taking"
+                ],
+                "boardgamedesigner": [
+                    "Ken Fisher"
+                ]
+            },
+            "ratings": "6.98177",
+            "weight": "1.7091"
+        }
+    }
+]
