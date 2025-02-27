@@ -1,7 +1,15 @@
 import requests
 import xml.etree.ElementTree as ET
+import re
+from collections import defaultdict
 
 BGG_API_URL = "https://boardgamegeek.com/xmlapi"
+
+async def fetch_bgg_thing(game_id: int):
+    """BGG API에서 원본 XML 데이터를 JSON으로 변환하여 반환"""
+    raw_xml = await fetch_bgg_thing_raw(game_id)
+    json_data = xml_to_json(raw_xml)
+    return parse_game_data(json_data)
 
 async def fetch_bgg_thing_raw(game_id: int):
     """BGG API에서 원본 XML 데이터를 반환"""
@@ -9,189 +17,91 @@ async def fetch_bgg_thing_raw(game_id: int):
     response = requests.get(url)
     return response.text  # 원본 XML 그대로 반환
 
-async def fetch_bgg_game_raw(game_id: int):
-    """BGG API에서 원본 XML 데이터를 반환"""
-    url = f"{BGG_API_URL}/boardgame/{game_id}"
-    response = requests.get(url)
-    return response.text  # 원본 XML 그대로 반환
+def parse_xml(raw_xml):
+    """XML을 JSON으로 변환하는 함수"""
+    return xml_to_json(raw_xml)
 
-async def fetch_bgg_game(game_id: int):
-    """BGG API에서 보드게임 정보를 파싱해서 반환 (모든 태그 포함)"""
-    raw_xml = await fetch_bgg_thing_raw(game_id)
-    #raw_xml = await fetch_bgg_game_raw(game_id)
-    return get_desired_tags(raw_xml)
-    #return get_all_tags(raw_xml)
-    root = ET.fromstring(raw_xml)
+def xml_to_json(xml_string):
+    """XML 문자열을 JSON 객체로 변환하는 함수"""
+    root = ET.fromstring(xml_string)
 
     def parse_element(element):
-        """재귀적으로 XML 요소를 파싱하여 딕셔너리로 변환"""
-        parsed = {f"@{k}": v for k, v in element.attrib.items()}  # 속성 파싱
+        """재귀적으로 XML 요소를 파싱하여 JSON 딕셔너리로 변환"""
+        parsed = {f"@{k}": v for k, v in element.attrib.items()}  # 속성 저장
+
+        # 텍스트 값이 있으면 저장
         if element.text and element.text.strip():
-            parsed["#text"] = element.text.strip()  # 태그 내 텍스트 값 저장
+            parsed["#text"] = element.text.strip()
 
-        children = [parse_element(child) for child in element]  # 자식 요소 파싱
-        if children:
-            parsed["children"] = children
-
-        return {element.tag: parsed}  # 태그명 포함한 딕셔너리 반환
-
-    parsed_data = parse_element(root)  # XML 전체를 파싱
-
-    return {"id": game_id, "parsed_data": parsed_data, "raw_xml": raw_xml}
-
-
-def get_all_tags(xml_string):
-    root = ET.fromstring(xml_string)
-    tags = set()  # 중복 제거를 위한 set 사용
-
-    def traverse(element):
-        tags.add(element.tag)  # 현재 태그 저장
+        # 자식 요소 처리
+        children = {}
         for child in element:
-            traverse(child)  # 재귀적으로 탐색
+            child_data = parse_element(child)
+            if child.tag in children:
+                if isinstance(children[child.tag], list):
+                    children[child.tag].append(child_data)
+                else:
+                    children[child.tag] = [children[child.tag], child_data]
+            else:
+                children[child.tag] = child_data
 
-    traverse(root)
-    return tags
+        # 자식 요소가 있다면 추가
+        if children:
+            parsed.update(children)
 
-# desired_tags = [
-#     "minplaytime", "boardgamedesigner", "boardgamecategory",
-#     "poll-summary", "playingtime", "age",
-#     "minplayers", "maxplaytime", "boardgamemechanic", "name", "image",
-#     "maxplayers", "thumbnail"
-# ]
+        return parsed
 
-desired_tags = [
-    "item",
-    "poll-summary",
-    "usersrated",
-    "median",
-    "rank",
-    "minplayers",
-    "owned",
-    "maxplaytime",
-    "minplaytime",
-    "thumbnail",
-    "playingtime",
-    "ratings",
-    "link",
-    "wanting",
-    "maxplayers",
-    "average",
-    "stddev",
-    "minage",
-    "results",
-    "name",
-    "result",
-    "statistics",
-    "items",
-    "poll",
-    "trading",
-    "image",
-    "description",
-    "wishing",
-    "ranks",
-    "bayesaverage",
-    "yearpublished",
-    "numweights",
-    "numcomments",
-    "averageweight"
-  ]
+    return parse_element(root)  # **딕셔너리 반환 (JSON 객체)**
 
-def get_desired_tags(xml_string):
-    root = ET.fromstring(xml_string)
-    filtered_elements = {}
+def parse_game_data(data):
+    item = data.get("item", {})
+    parsed_data = {
+        "thumbnail": item.get("thumbnail", {}).get("#text", None),
+        "image": item.get("image", {}).get("#text", None),
+        "name": [name["@value"] for name in item.get("name", [])],
+        "minplayers": item.get("minplayers", None).get("@value", None),
+        "maxplayers": item.get("maxplayers", None).get("@value", None),
+        "suggested_playerage": None,  # 추후 추가
+        "suggested_numplayers": get_suggested_numplayers(item.get("poll-summary", {})),
+        "playingtime": item.get("playingtime", {}).get("@value", None),
+        "minplaytime": item.get("minplaytime", {}).get("@value", None),
+        "maxplaytime": item.get("maxplaytime", {}).get("@value", None),
+        "minage": item.get("minage", {}).get("@value", None),
+        "link": filter_links(item.get("link")),  # 추후 추가
+        "ratings": item.get("statistics", {}).get("ratings", {}).get("average", None).get("@value", None),
+        "weight": item.get("statistics", {}).get("ratings",{}).get("averageweight", {}).get("@value", None)
+    }
+    return parsed_data
 
-    def traverse(element):
-        # 태그가 여러 번 나올 수 있는 경우 리스트로 저장
-        if element.tag in desired_tags:
-            if element.tag not in filtered_elements:
-                filtered_elements[element.tag] = []
-            filtered_elements[element.tag].append(element.text)  # 모든 값을 리스트에 추가
+def get_suggested_numplayers(poll_summary):
+    """poll-summary에서 suggested_numplayers에 해당하는 값 추출 후 숫자만 리스트로 반환"""
+    suggested_numplayers = {}
+    
+    if poll_summary.get("@name") == "suggested_numplayers":
+        for result in poll_summary.get("result", []):
+            name = result.get("@name")
+            value = result.get("@value", "")
 
-        # poll-summary와 같은 하위 구조가 있는 경우 하위 태그는 무시
-        if element.tag != "poll-summary":
-            for child in element:
-                traverse(child)  # 재귀적으로 탐색
+            # 0~9 숫자만 추출하여 리스트로 변환
+            numbers = [int(n) for n in re.findall(r"\d+", value)]
 
-    traverse(root)
-    return filtered_elements
-# def get_desired_tags(xml_string):
-#     root = ET.fromstring(xml_string)
-#     filtered_elements = {}
+            if name == "bestwith":
+                suggested_numplayers["bestwith"] = numbers
+            elif name == "recommmendedwith":
+                suggested_numplayers["recommendedwith"] = numbers
 
-#     def traverse(element):
-#         # 태그가 여러 번 나올 수 있는 경우 리스트로 저장
-#         if element.tag in desired_tags:
-#             if element.tag not in filtered_elements:
-#                 filtered_elements[element.tag] = []
-#             filtered_elements[element.tag].append(element.text if element.tag != "poll-summary" else None)
+    return suggested_numplayers
 
-#         # poll-summary와 같은 하위 구조가 있는 경우, 하위 내용까지 추출
-#         if element.tag == "poll-summary":
-#             poll_data = {"@name": element.attrib.get("name"), "@title": element.attrib.get("title"), "children": []}
-#             for child in element:
-#                 if child.tag == "result":
-#                     result_data = {"@name": child.attrib.get("name"), "@value": child.attrib.get("value")}
-#                     poll_data["children"].append(result_data)
-#             filtered_elements["poll-summary"] = poll_data
+def filter_links(links):
+    """boardgamecategory, boardgamemechanic, boardgamedesigner만 추출하여 value 값 리스트 반환"""
+    allowed_types = {"boardgamecategory", "boardgamemechanic", "boardgamedesigner"}
+    filtered_links = defaultdict(list)
 
-#         # 다른 태그들에 대해서는 재귀적으로 탐색
-#         for child in element:
-#             traverse(child)
+    for link in links:
+        link_type = link.get("@type")
+        link_value = link.get("@value")
 
-#     traverse(root)
-#     return filtered_elements
+        if link_type in allowed_types and link_value:
+            filtered_links[link_type].append(link_value)
 
-
-# [
-#   "results",
-#   "boardgamepodcastepisode",
-#   "result",
-#   "boardgames",
-#   "minplaytime",
-#   "description",
-#   "boardgamedesigner",
-#   "boardgamepublisher",
-#   "boardgamecategory",
-#   "yearpublished",
-#   "videogamebg",
-#   "poll-summary",
-#   "boardgamehonor",
-#   "boardgameimplementation",
-#   "playingtime",
-#   "age",
-#   "boardgameversion",
-#   "boardgameartist",
-#   "boardgamesubdomain",
-#   "boardgamefamily",
-#   "minplayers",
-#   "maxplaytime",
-#   "boardgameaccessory",
-#   "boardgamemechanic",
-#   "poll",
-#   "name",
-#   "image",
-#   "maxplayers",
-#   "cardset",
-#   "thumbnail",
-#   "boardgame"
-# ]
-
-# [
-#   "minplaytime",
-#   "description",
-#   "boardgamedesigner",
-#   "boardgamecategory",
-#   "poll-summary",
-#   "playingtime",
-#   "age",
-#   "boardgameartist",
-#   "boardgamefamily",
-#   "minplayers",
-#   "maxplaytime",
-#   "boardgamemechanic",
-#   "name",
-#   "image",
-#   "maxplayers",
-#   "thumbnail",
-#   "boardgame"
-# ]
+    return dict(filtered_links)
