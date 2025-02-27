@@ -79,13 +79,14 @@
 #     uvicorn.run("app:app", host="0.0.0.0", port=8501, reload=True)
 
 from fastapi import FastAPI
-from app.routes import bgg, games
+from app.routes import bgg, games,data
 
 app = FastAPI(title="Boardgame API")
 
 # 라우터 등록
 app.include_router(bgg.router, prefix="/bgg", tags=["BoardGameGeek"])
 app.include_router(games.router, prefix="/games", tags=["Games"])
+app.include_router(data.router, prefix="/data", tags=["Data"])
 
 @app.get("/")
 def home():
