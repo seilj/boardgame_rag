@@ -55,23 +55,33 @@ def xml_to_json(xml_string):
 
 def parse_game_data(data):
     item = data.get("item", {})
+    
+    # 이름 처리 (리스트인지 문자열인지 구분)
+    names = item.get("name", [])
+    if isinstance(names, list):
+        names = [name["@value"] for name in names if isinstance(name, dict) and "@value" in name]
+    else:
+        names = [names]  # 이름이 문자열일 경우 리스트로 감싸서 처리
+    
     parsed_data = {
         "thumbnail": item.get("thumbnail", {}).get("#text", None),
         "image": item.get("image", {}).get("#text", None),
-        "name": [name["@value"] for name in item.get("name", [])],
-        "minplayers": item.get("minplayers", None).get("@value", None),
-        "maxplayers": item.get("maxplayers", None).get("@value", None),
-        "suggested_playerage": None,  # 추후 추가
+        "name": names,  # 위에서 처리한 names 추가
+        "minplayers": item.get("minplayers", {}).get("@value", None),
+        "maxplayers": item.get("maxplayers", {}).get("@value", None),
+        "suggested_playerage": item.get("suggested_playerage", None),  # 추후 추가될 데이터
         "suggested_numplayers": get_suggested_numplayers(item.get("poll-summary", {})),
         "playingtime": item.get("playingtime", {}).get("@value", None),
         "minplaytime": item.get("minplaytime", {}).get("@value", None),
         "maxplaytime": item.get("maxplaytime", {}).get("@value", None),
         "minage": item.get("minage", {}).get("@value", None),
-        "link": filter_links(item.get("link")),  # 추후 추가
-        "ratings": item.get("statistics", {}).get("ratings", {}).get("average", None).get("@value", None),
-        "weight": item.get("statistics", {}).get("ratings",{}).get("averageweight", {}).get("@value", None)
+        "link": filter_links(item.get("link", [])),  # 기본값 빈 리스트 추가
+        "ratings": item.get("statistics", {}).get("ratings", {}).get("average", {}).get("@value", None),
+        "weight": item.get("statistics", {}).get("ratings", {}).get("averageweight", {}).get("@value", None)
     }
+    
     return parsed_data
+
 
 def get_suggested_numplayers(poll_summary):
     """poll-summary에서 suggested_numplayers에 해당하는 값 추출 후 숫자만 리스트로 반환"""
@@ -105,3 +115,4 @@ def filter_links(links):
             filtered_links[link_type].append(link_value)
 
     return dict(filtered_links)
+
